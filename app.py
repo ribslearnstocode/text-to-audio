@@ -25,13 +25,16 @@ with st.sidebar:
     st.subheader('Saira Ali')
     st.subheader('Aqsa Ashfaq ')
 
-
-
-
-def handle_upsert():    
-  main_container.text(" ")
-  main_container.text(generated_notes) 
+def trigger_funt():
+  main_container.text('')
+  main_container.write(generated_notes)
   main_container.audio(song_data,sample_rate=samplerate)
+
+
+st.button('Click for song', on_click=trigger_funt)
+
+
+
 
 
 
@@ -166,10 +169,3 @@ song_data=get_song_data(generated_notes.strip())
 
 print("new song has been created")
 
-def trigger_funt():
-  main_container.text('')
-  main_container.write(generated_notes)
-  main_container.audio(song_data,sample_rate=samplerate)
-
-
-st.button('Click for song', on_click=trigger_funt)
