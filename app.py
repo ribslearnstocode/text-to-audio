@@ -79,14 +79,14 @@ def get_piano_notes():
 note_freqs = get_piano_notes()
 
 
-def get_song_data(music_notes):
-    '''
-    Function to concatenate all the waves (notes)
-    '''
-    note_freqs = get_piano_notes() # Function that we made earlier
-    song = [get_wave(note_freqs[note]) for note in music_notes.split('-')]
-    song = np.concatenate(song)
-    return song
+# def get_song_data(music_notes):
+#     '''
+#     Function to concatenate all the waves (notes)
+#     '''
+#     note_freqs = get_piano_notes() # Function that we made earlier
+#     song = [get_wave(note_freqs[note]) for note in music_notes.split('-')]
+#     song = np.concatenate(song)
+#     return song
 
 
 
@@ -161,7 +161,7 @@ def cohere_generate(genre):
 
 
 generated_notes=cohere_generate(stored_string)
-song_data=get_song_data(generated_notes.strip())
+# song_data=get_song_data(generated_notes.strip())
 
 if st.button('Click'):
     st.write(generated_notes)
