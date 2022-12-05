@@ -35,7 +35,7 @@ def handle_upsert():
 
 
 
-st.button('Click for song', on_click=handle_upsert)
+
 main_container=st.container()   
 
 samplerate = 44100 #Frequecy in Hz
@@ -165,3 +165,11 @@ print(generated_notes)
 song_data=get_song_data(generated_notes.strip())
 
 print("new song has been created")
+
+def trigger_funt():
+  main_container.text('')
+  main_container.write(generated_notes)
+  main_container.audio(song_data,sample_rate=samplerate)
+
+
+st.button('Click for song', on_click=trigger_funt)
