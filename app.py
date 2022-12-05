@@ -162,10 +162,6 @@ def cohere_generate(genre):
 
 
 generated_notes=cohere_generate(stored_string)
-
-
-print(generated_notes)
 song_data=get_song_data(generated_notes.strip())
 
-print("new song has been created")
 
