@@ -30,7 +30,7 @@ with st.sidebar:
 
 def handle_upsert():    
     main_container.text(" ")
-    main_container.text(generated_notes)
+    
     main_container.audio(song_data,sample_rate=samplerate)
 
 
