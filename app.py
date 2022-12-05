@@ -25,13 +25,12 @@ with st.sidebar:
     st.subheader('Saira Ali')
     st.subheader('Aqsa Ashfaq ')
 
-def trigger_funt():
-  main_container.text('')
-  main_container.write(generated_notes)
-  main_container.audio(song_data,sample_rate=samplerate)
+# def trigger_funt():
+#   main_container.text('')
+#   main_container.write(generated_notes)
+#   main_container.audio(song_data,sample_rate=samplerate)
 
 
-st.button('Click for song', on_click=trigger_funt)
 
 
 
@@ -164,4 +163,7 @@ def cohere_generate(genre):
 generated_notes=cohere_generate(stored_string)
 song_data=get_song_data(generated_notes.strip())
 
-
+if st.button('Click'):
+    st.write(generated_notes)
+else:
+    st.write('')
