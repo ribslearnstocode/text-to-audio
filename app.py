@@ -164,6 +164,6 @@ generated_notes=cohere_generate(stored_string)
 # song_data=get_song_data(generated_notes.strip())
 
 if st.button('Click'):
-    st.write(generated_notes)
+    st.text_area(value=generated_notes,label="the processed note is:")
 else:
     st.write('')
