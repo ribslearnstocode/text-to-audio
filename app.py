@@ -29,9 +29,9 @@ with st.sidebar:
 
 
 def handle_upsert():    
-    main_container.text(" ")
-    main_container.text_area(value=generated_notes,label="The generated note is:")
-    main_container.audio(song_data,sample_rate=samplerate)
+  main_container.text(" ")
+  main_container.text_area(value=generated_notes,label="The generated note is:")
+  main_container.audio(song_data,sample_rate=samplerate)
 
 
 
